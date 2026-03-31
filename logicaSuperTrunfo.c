@@ -8,6 +8,10 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
+    char estadoCarta1, estadoCarta2;
+    char codigoCarta1[4], codigoCarta2[4], nomeCarta1[50], nomeCarta2[50];
+    int pontoTuristicoCarta1, pontoTuristicoCarta2, populacaoCarta1, populacaoCarta2;
+    float areaCarta1, areaCarta2, pibCarta1, pibCarta2, densidadePopCarta1, densidadePopCarta2, PibPerCaptaCarta1, PibPerCaptaCarta2, superPoderCarta1, superPoderCarta2;
 
     
     // Cadastro das Cartas:
@@ -20,6 +24,50 @@ int main() {
     // scanf("%s", codigo);
     // 
     // (Repita para cada propriedade)
+    printf("Olá seja bem vindo ao cadastro de cartas do Super Trunfo\nVamos começar cadastrando os dados da Carta 1\n");
+
+    //carta 1
+    printf("Digite o estado da carta 1(Letra de A a H):\n");
+    scanf(" %c", &estadoCarta1);
+    printf("Digite o código da carta 1(Letra do estado + numero de 01 a 04):\n");
+    scanf("%s", codigoCarta1);
+    printf("Digite o nome da cidade:\n");
+    scanf(" %[^\n]", nomeCarta1);
+    printf("Digite o número de habitantes da cidade:\n");
+    scanf("%d", &populacaoCarta1);
+    printf("Digite a área da cidade (km²):\n");
+    scanf("%f", &areaCarta1);
+    printf("Digite o PIB da cidade:\n");
+    scanf("%f", &pibCarta1);
+    printf("Digite o número de pontos turisticos da cidade:\n");
+    scanf("%d", &pontoTuristicoCarta1);
+
+    //Carta 2
+    printf("Agora vamos cadastrar a segunda carta:\n");
+    printf("Digite o estado da carta 2(Letra de A a H):\n");
+    scanf(" %c", &estadoCarta2);
+    printf("Digite o código da carta 2(Letra do estado + numero de 01 a 04):\n");
+    scanf("%s", codigoCarta2);
+    printf("Digite o nome da cidade:\n");
+    scanf(" %[^\n]", nomeCarta2);
+    printf("Digite o número de habitantes da cidade:\n");
+    scanf("%d", &populacaoCarta2);
+    printf("Digite a área da cidade (km²):\n");
+    scanf("%f", &areaCarta2);
+    printf("Digite o PIB da cidade:\n");
+    scanf("%f", &pibCarta2);
+    printf("Digite o número de pontos turisticos da cidade:\n");
+    scanf("%d", &pontoTuristicoCarta2);
+
+    //Area para o calculo das informações
+    //carta 1
+    densidadePopCarta1 = populacaoCarta1 / areaCarta1;
+    PibPerCaptaCarta1 = pibCarta1 / populacaoCarta1;
+
+    //carta 2
+    densidadePopCarta2 = populacaoCarta2 / areaCarta2;
+    PibPerCaptaCarta2 = pibCarta2 / populacaoCarta2;
+  
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
@@ -38,6 +86,12 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf ("\nExibição dos resultados:\n");
+    if(populacaoCarta1 > populacaoCarta2){
+        printf("\nCarta 1: %s: %d\nCarta 2: %s: %d\nResultado: Carta 1 (%s) venceu!",nomeCarta1, populacaoCarta1,nomeCarta2, populacaoCarta2, nomeCarta1 );
+    } else {
+        printf("\nCarta 1: %s: %d\nCarta 2: %s: %d\nResultado: Carta 2 (%s) venceu!",nomeCarta1, populacaoCarta1,nomeCarta2, populacaoCarta2, nomeCarta2 );
+    }
 
     return 0;
 }
