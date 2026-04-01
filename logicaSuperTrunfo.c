@@ -24,6 +24,7 @@ int main() {
     // scanf("%s", codigo);
     // 
     // (Repita para cada propriedade)
+
     printf("Olá seja bem vindo ao cadastro de cartas do Super Trunfo\nVamos começar cadastrando os dados da Carta 1\n");
 
     //carta 1
@@ -63,12 +64,12 @@ int main() {
     //cartas ja cadastradas para testes
     //carta 1
     populacaoCarta1 = 1000;
-    pibCarta1 = 6000;
+    pibCarta1 = 600;
     areaCarta1= 450;
     pontoTuristicoCarta1 = 4;
     //carta2
-    populacaoCarta2 = 10000;
-    pibCarta2 = 500;
+    populacaoCarta2 = 1000;
+    pibCarta2 = 600;
     areaCarta2 = 5000;
     pontoTuristicoCarta2 = 13;
     */
@@ -113,38 +114,48 @@ int main() {
     switch (opcaoUser)
     {
     case 1:
-        if (populacaoCarta1 > populacaoCarta2){
-            printf("Carta1 - %d\nCarta 2 - %d\n Carta 1 venceu!", populacaoCarta1, populacaoCarta2 );
+        if(populacaoCarta1 == populacaoCarta2){
+            printf("População:\nCarta1 - %d\nCarta 2 - %d\n Empate!", populacaoCarta1, populacaoCarta2);
+        } else if (populacaoCarta1 > populacaoCarta2){
+            printf("População:\nCarta1 - %d\nCarta 2 - %d\n Carta 1 venceu!", populacaoCarta1, populacaoCarta2 );
         }else {
-            printf("Carta1 - %d\nCarta 2 - %d\n Carta 2 venceu!", populacaoCarta1, populacaoCarta2 );
+            printf("População:\nCarta1 - %d\nCarta 2 - %d\n Carta 2 venceu!", populacaoCarta1, populacaoCarta2 );
         }
         break;
-            case 2:
-        if (areaCarta1 > areaCarta2){
-            printf("Carta1 - %f\nCarta 2 - %f\n Carta 1 venceu!", areaCarta1, areaCarta2 );
+    case 2:
+        if(areaCarta1 == areaCarta1){
+            printf("Area:\nCarta1 - %f\nCarta 2 - %f\n Empate!", areaCarta1, areaCarta1);
+        } else if (areaCarta1 > areaCarta2){
+            printf("Area:\nCarta1 - %f\nCarta 2 - %f\n Carta 1 venceu!", areaCarta1, areaCarta2 );
         }else {
-            printf("Carta1 - %f\nCarta 2 - %f\n Carta 2 venceu!", areaCarta1, areaCarta2 );
+            printf("Area:\nCarta1 - %f\nCarta 2 - %f\n Carta 2 venceu!", areaCarta1, areaCarta2 );
         }
         break;
-            case 3:
-        if (pibCarta1 > pibCarta2){
-            printf("Carta1 - %f\nCarta 2 - %f\n Carta 1 venceu!", pibCarta1, pibCarta2 );
+    case 3:
+        if(pibCarta1 == pibCarta2){
+            printf("PIB:\nCarta1 - %f\nCarta 2 - %f\n Empate!", pibCarta1, pibCarta2);
+        } else if (pibCarta1 > pibCarta2){
+            printf("PIB:\nCarta1 - %f\nCarta 2 - %f\n Carta 1 venceu!", pibCarta1, pibCarta2 );
         }else {
-            printf("Carta1 - %f\nCarta 2 - %f\n Carta 2 venceu!", pibCarta1, pibCarta2 );
+            printf("PIB:\nCarta1 - %f\nCarta 2 - %f\n Carta 2 venceu!", pibCarta1, pibCarta2 );
         }
         break;
-            case 4:
-        if (pontoTuristicoCarta1 > pontoTuristicoCarta2){
-            printf("Carta1 - %d\nCarta 2 - %d\n Carta 1 venceu!", pontoTuristicoCarta1, pontoTuristicoCarta2 );
+    case 4:
+        if(pontoTuristicoCarta1 == pontoTuristicoCarta2){
+            printf("Número de pontos turisticos:\nCarta1 - %d\nCarta 2 - %d\n Empate!", pontoTuristicoCarta1, pontoTuristicoCarta2);
+        } else if (pontoTuristicoCarta1 > pontoTuristicoCarta2){
+            printf("Número de pontos turisticos:\nCarta1 - %d\nCarta 2 - %d\n Carta 1 venceu!", pontoTuristicoCarta1, pontoTuristicoCarta2 );
         }else {
-            printf("Carta1 - %d\nCarta 2 - %d\n Carta 2 venceu!", pontoTuristicoCarta1, pontoTuristicoCarta2 );
+            printf("Número de pontos turisticos:\nCarta1 - %d\nCarta 2 - %d\n Carta 2 venceu!", pontoTuristicoCarta1, pontoTuristicoCarta2 );
         }
         break;    
-        case 5:
-        if (densidadePopCarta1 < densidadePopCarta2){
-            printf("Carta1 - %f\nCarta 2 - %f\n Carta 1 venceu!", densidadePopCarta1, densidadePopCarta2 );
+    case 5:
+        if(densidadePopCarta1== densidadePopCarta2){
+            printf("Densidade demográfica:\nCarta1 - %f\nCarta 2 - %f\n Empate!", densidadePopCarta1, densidadePopCarta2);
+        } else if (densidadePopCarta1 < densidadePopCarta2){
+            printf("Densidade demográfica:\nCarta1 - %f\nCarta 2 - %f\n Carta 1 venceu!", densidadePopCarta1, densidadePopCarta2 );
         }else {
-            printf("Carta1 - %f\nCarta 2 - %f\n Carta 2 venceu!", densidadePopCarta1, densidadePopCarta2 );
+            printf("Densidade demográfica:\nCarta1 - %f\nCarta 2 - %f\n Carta 2 venceu!", densidadePopCarta1, densidadePopCarta2 );
         }
         break;
     default:
