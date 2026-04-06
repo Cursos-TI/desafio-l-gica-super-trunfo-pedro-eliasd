@@ -26,7 +26,7 @@ int main() {
     // (Repita para cada propriedade)
 
     printf("Olá seja bem vindo ao cadastro de cartas do Super Trunfo\nVamos começar cadastrando os dados da Carta 1\n");
-
+    /*
     //carta 1
     printf("Digite o estado da carta 1(Letra de A a H):\n");
     scanf(" %c", &estadoCarta1);
@@ -59,8 +59,8 @@ int main() {
     scanf("%f", &pibCarta2);
     printf("Digite o número de pontos turisticos da cidade:\n");
     scanf("%d", &pontoTuristicoCarta2);
-
-    /*
+    */
+    
     //cartas ja cadastradas para testes
     //carta 1
     populacaoCarta1 = 1000;
@@ -68,11 +68,11 @@ int main() {
     areaCarta1= 450;
     pontoTuristicoCarta1 = 4;
     //carta2
-    populacaoCarta2 = 1000;
-    pibCarta2 = 600;
+    populacaoCarta2 = 100;
+    pibCarta2 = 500;
     areaCarta2 = 5000;
     pontoTuristicoCarta2 = 13;
-    */
+    
 
     //Area para o calculo das informações
     //carta 1
@@ -115,18 +115,23 @@ int main() {
     {
     case 1:
         resultado1 = populacaoCarta1 > populacaoCarta2 ? 1 : 0;
+        printf("População\nCarta 1: %d\nCarta 2: %d\n", populacaoCarta1, populacaoCarta2);
         break;
     case 2:
         resultado1 = areaCarta1 > areaCarta2 ? 1 : 0;
+        printf("Area\nCarta 1: %f\nCarta 2: %f\n", areaCarta1, areaCarta2);
         break;
     case 3:
         resultado1 = pibCarta1 > pibCarta2 ? 1 : 0;
+        printf("PIB\nCarta 1: %f\nCarta 2: %f\n", pibCarta1, pibCarta2);
         break;
     case 4:
         resultado1 = pontoTuristicoCarta1 > pontoTuristicoCarta2 ? 1 : 0;
+        printf("Número de pontos turisticos\nCarta 1: %d\nCarta 2: %d\n", pontoTuristicoCarta1, pontoTuristicoCarta2);
         break;
     case 5:
         resultado1 = densidadePopCarta1 < densidadePopCarta2 ? 1 : 0;
+        printf("Densidade demográfica\nCarta 1: %f\nCarta 2: %f\n", densidadePopCarta1, densidadePopCarta2);
         break;
     default:
         printf("Opção inválida.\n");
@@ -150,23 +155,37 @@ int main() {
         {
         case 1:
             resultado2 = populacaoCarta1 > populacaoCarta2 ? 1 : 0;
+            printf("População\nCarta 1: %d\nCarta 2: %d\n", populacaoCarta1, populacaoCarta2);
             break;
         case 2:
             resultado2 = areaCarta1 > areaCarta2 ? 1 : 0;
+            printf("Area\nCarta 1: %f\nCarta 2: %f\n", areaCarta1, areaCarta2);
             break;
         case 3:
             resultado2 = pibCarta1 > pibCarta2 ? 1 : 0;
+            printf("PIB\nCarta 1: %f\nCarta 2: %f\n", pibCarta1, pibCarta2);
             break;
         case 4:
             resultado2 = pontoTuristicoCarta1 > pontoTuristicoCarta2 ? 1 : 0;
+            printf("Número de pontos turisticos\nCarta 1: %d\nCarta 2: %d\n", pontoTuristicoCarta1, pontoTuristicoCarta2);
             break;
         case 5:
             resultado2 = densidadePopCarta1 < densidadePopCarta2 ? 1 : 0;
+            printf("Densidade demográfica\nCarta 1: %f\nCarta 2: %f\n", densidadePopCarta1, densidadePopCarta2);
             break;
         default:
             printf("Opção inválida.\n");
             break;
         }
+    }
+
+
+    if (resultado1 && resultado2) {
+        printf("Parabéns, você venceu!");
+    } else if (resultado1 != resultado2) {
+        printf ("Empate.");
+    } else {
+        printf("Que pena, você perdeu :(");
     }
 
     return 0;
